@@ -34,11 +34,11 @@
     // Anotar/Registrar a jogada, do primeiro jogador
     velha = 1;
     do {
-        window.alert(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
-        window.alert(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
-        window.alert(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
+        console.log(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
+        console.log(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
+        console.log(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
         jogada = "";
-        window.alert("Digite a posição da sua peça JOGADOR " + jogadorDaVez);
+        console.log("Digite a posição da sua peça JOGADOR " + jogadorDaVez);
         jogada = window.prompt('Enter a value for jogada');
         if (validaPosicao(jogada)) {
 
@@ -48,7 +48,7 @@
 
             // CORRIGIR O ERRO DE DIGITAÇÃO
             coluna = parseInt(jogada.charAt(2));
-            window.alert("Linha: " + linha + "; Coluna: " + coluna);
+            console.log("Linha: " + linha + "; Coluna: " + coluna);
 
             // Verificar se a posição 'jogada' é valida
             if (tabuleiro[3 * linha + coluna] == 0) {
@@ -78,12 +78,12 @@
                 }
                 velha = velha + 1;
             } else {
-                window.alert("Posição ocupada, jogue novamente !!!");
+                console.log("Posição ocupada, jogue novamente !!!");
 
                 // Informar ao Jogador 1 que a posição está preenchida, é inválida e ele precisa informar um posição válida.
             }
         } else {
-            window.alert("Jogada inválida !!!");
+            console.log("Jogada inválida !!!");
         }
 
         // Verificar a jogada vencedora nas linhas.
@@ -91,13 +91,13 @@
 
     // Verificar o tabuleiro, se houve ganhador ou empate, finalizar o jogo.
     if (haVencedor) {
-        window.alert("Parabéns pela a vitória, jogador " + jogadorDaVez);
+        console.log("Parabéns pela a vitória, jogador " + jogadorDaVez);
     } else {
-        window.alert("Deu VELHA!!!");
+        console.log("Deu VELHA!!!");
     }
-    window.alert(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
-    window.alert(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
-    window.alert(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
+    console.log(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
+    console.log(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
+    console.log(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
 }
 
 function validaPosicao(entrada) {
